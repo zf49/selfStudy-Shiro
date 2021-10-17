@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01-helloshrio/01-helloshrio.iml" filepath="$PROJECT_DIR$/01-helloshrio/01-helloshrio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-springboot/02-springboot.iml" filepath="$PROJECT_DIR$/02-springboot/02-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/shrio.iml" filepath="$PROJECT_DIR$/shrio.iml" />
     </modules>
   </component>

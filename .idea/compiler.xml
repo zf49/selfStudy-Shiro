@@ -8,16 +8,19 @@
         <outputRelativeToContentRoot value="true" />
         <module name="01-helloshrio" />
         <module name="shrio" />
+        <module name="02-springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-helloshrio" target="1.8" />
+      <module name="02-springboot" target="1.8" />
       <module name="shrio" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="01-helloshrio" options="-parameters" />
+      <module name="02-springboot" options="-parameters" />
       <module name="shrio" options="-parameters" />
     </option>
   </component>

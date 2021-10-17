@@ -29,11 +29,16 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core -->
+<!--         https://mvnrepository.com/artifact/org.apache.shiro/shiro-core-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shiro</groupId>-->
+<!--            <artifactId>shiro-core</artifactId>-->
+<!--            <version>1.7.1</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-core</artifactId>
-            <version>1.8.0</version>
+            <artifactId>shiro-spring-boot-starter</artifactId>
+            <version>1.5.3</version>
         </dependency>
 
 
