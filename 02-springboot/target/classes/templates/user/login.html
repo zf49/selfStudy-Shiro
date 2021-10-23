@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,7 +9,10 @@
 
 
 <hr>
-    <form action="">
+
+       <p th:text="${msg}" style="color: red"></p>
+
+    <form th:action="@{/login}">
         <input type="text" name="username">
         <input type="text" name="password">
         <input type="submit">

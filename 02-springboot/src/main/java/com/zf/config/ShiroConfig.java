@@ -1,6 +1,7 @@
 package com.zf.config;
 
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
@@ -33,21 +34,20 @@ public class ShiroConfig {
 
          * */
 
-
-
-
+        
         Map<String, String> filterMap = new LinkedHashMap<>();
-        filterMap.put("/user/add","anon");
-        filterMap.put("/user/update","authc");
-        // filterMap.put("/user/*","authc");
+        // 授权，正常情况下，为授权用户应当跳到未授权界面
+        filterMap.put("/user/add","perms[user:add]");
+        filterMap.put("/user/update","perms[user:update]");
+         filterMap.put("/user/*","authc");
 
 
        bean.setFilterChainDefinitionMap(filterMap);
 
        // 如果没有权限 设置登陆请求
-
        bean.setLoginUrl("/tologin");
-
+        // 设置未授权页面
+        bean.setUnauthorizedUrl("/noauth");
         return bean;
     }
 
@@ -74,6 +74,11 @@ public class ShiroConfig {
 
 
 
+   // 整合shiro 和 thymeleaf
+    @Bean
+    public ShiroDialect getShiroDialect(){
+       return new ShiroDialect();
+    }
 
 
 }
